@@ -11,9 +11,11 @@ dependencies:
   dio: ^5.4.0
   flutter:
     sdk: flutter
+  flutter_timezone: ^1.0.8
   flutter_vlc_player: ^7.4.1
   fullscreen: ^1.0.3
   shared_preferences: ^2.2.2
+  unixtime: ^1.0.0
 
 dev_dependencies:
   flutter_test:

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_vlc_player/flutter_vlc_player.dart';
-import 'package:forpost/custom_player%20-%20Copia.dart';
+import 'package:forpost/custom_player_stream.dart';
 import 'package:forpost/src/View/auth_screen.dart';
 import 'package:forpost/src/View/camera_screen.dart';
 

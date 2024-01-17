@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_vlc_player/flutter_vlc_player.dart';
 
-class CustomPlayer extends StatefulWidget {
-  CustomPlayer({Key? key, required this.url}) : super(key: key);
+class CustomPlayerArchive extends StatefulWidget {
+  CustomPlayerArchive({Key? key, required this.url}) : super(key: key);
 
   String url;
 
   @override
-  State<CustomPlayer> createState() => _CustomPlayerState();
+  State<CustomPlayerArchive> createState() => _CustomPlayerArchiveState();
 }
 
-class _CustomPlayerState extends State<CustomPlayer> {
+class _CustomPlayerArchiveState extends State<CustomPlayerArchive> {
   late bool _isplaying = true;
   VlcPlayerController? _vlcPlayerController;
   bool _isFullScreen = false;
@@ -122,24 +122,24 @@ class _CustomPlayerState extends State<CustomPlayer> {
                           size: 30,
                         ),
                       ),
-                Expanded(
-                  flex: 2,
-                  child: SizedBox(
-                    child: Slider(
-                        value: playbackValue,
-                        max: double.parse(_vlcPlayerController!
-                            .value.duration.inSeconds
-                            .toString()),
-                        onChanged: (value) {
-                          setState(() {
-                            _vlcPlayerController!
-                                .seekTo(Duration(seconds: value.toInt()));
-                          });
+                // Expanded(
+                //   flex: 2,
+                //   child: SizedBox(
+                //     child: Slider(
+                //         value: playbackValue,
+                //         max: double.parse(_vlcPlayerController!
+                //             .value.duration.inSeconds
+                //             .toString()),
+                //         onChanged: (value) {
+                //           setState(() {
+                //             _vlcPlayerController!
+                //                 .seekTo(Duration(seconds: value.toInt()));
+                //           });
 
-                          // setState(() {});
-                        }),
-                  ),
-                ),
+                //           // setState(() {});
+                //         }),
+                //   ),
+                // ),
                 TextButton(
                   onPressed: () {
                     setState(() {

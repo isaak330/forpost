@@ -23,8 +23,10 @@ class CameraListScreen extends StatelessWidget {
             return SingleChildScrollView(
               child: Column(
                 children: snapshot.data!
-                    .map<Widget>(
-                        (e) => CameraCard(id: e.cameraID, name: e.name))
+                    .map<Widget>((e) => CameraCard(
+                          id: e.cameraID,
+                          name: e.name,
+                        ))
                     .toList(),
               ),
             );
@@ -38,6 +40,7 @@ class CameraListScreen extends StatelessWidget {
 class CameraCard extends StatelessWidget {
   final String id;
   final String name;
+
   const CameraCard({super.key, required this.id, required this.name});
   @override
   Widget build(BuildContext context) {
@@ -71,10 +74,10 @@ class CameraCard extends StatelessWidget {
           ),
           InkWell(
             onTap: () {
-              // Route route = MaterialPageRoute(
-              //     builder: (context) =>
-              //          VideoPlayerPage(id: int.parse(id), name: name));
-              // Navigator.push(context, route);
+              Route route = MaterialPageRoute(
+                  builder: (context) =>
+                      VideoPlayerPage(id: int.parse(id), name: name));
+              Navigator.push(context, route);
             },
             child: Container(
               height: 50,

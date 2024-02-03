@@ -70,8 +70,7 @@ class _AuthCreenState extends State<AuthCreen> {
                   enabledBorder: OutlineInputBorder(
                     borderRadius: const BorderRadius.all(Radius.circular(12)),
                     borderSide: BorderSide(
-                        color:
-                            _authState ? const Color(0xFFE1E3E6) : Colors.red),
+                        color:_authState ? const Color(0xFFE1E3E6) : Colors.red),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: const BorderRadius.all(Radius.circular(12)),

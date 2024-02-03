@@ -122,24 +122,26 @@ class _CustomPlayerArchiveState extends State<CustomPlayerArchive> {
                           size: 30,
                         ),
                       ),
-                // Expanded(
-                //   flex: 2,
-                //   child: SizedBox(
-                //     child: Slider(
-                //         value: playbackValue,
-                //         max: double.parse(_vlcPlayerController!
-                //             .value.duration.inSeconds
-                //             .toString()),
-                //         onChanged: (value) {
-                //           setState(() {
-                //             _vlcPlayerController!
-                //                 .seekTo(Duration(seconds: value.toInt()));
-                //           });
-
-                //           // setState(() {});
-                //         }),
-                //   ),
-                // ),
+                //////
+                Expanded(
+                  flex: 2,
+                  child: SizedBox(
+                    child: Slider(
+                        value: playbackValue,
+                        max: 182.0,
+                        // double.parse(_vlcPlayerController!
+                        //     .value.duration.inSeconds
+                        //     .toString()),
+                        onChanged: (value) {
+                          setState(() {
+                            _vlcPlayerController!
+                                .seekTo(Duration(seconds: value.toInt()));
+                          });
+                          // setState(() {});
+                        }),
+                  ),
+                ),
+                /////
                 TextButton(
                   onPressed: () {
                     setState(() {

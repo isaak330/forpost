@@ -8,6 +8,7 @@ class GetArchiveRepo {
     final sessionID = await GetSessionID();
     // final currentTimeZone = await FlutterTimezone.getLocalTimezone();
     final archiveTime = DateTime.now().unixtime - 180;
+    print(archiveTime);
     final response = await Dio().post('http://94.230.129.25/api/GetDownloadURL',
         data: ({
           'SessionID': sessionID,

@@ -1,6 +1,5 @@
 import 'package:appinio_video_player/appinio_video_player.dart';
 import 'package:flutter/material.dart';
-import 'package:forpost/custom_player_stream.dart';
 import 'package:forpost/src/Repos/get_archive_repo.dart';
 import 'package:forpost/src/Repos/get_stream_repo.dart';
 import 'package:forpost/src/custom_player_archive.dart';
@@ -19,6 +18,7 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
   late Uri uri;
   @override
   void initState() {
+   var _stream = GetStreamRepo.GetStream(widget.id);
     super.initState();
   }
 
@@ -26,6 +26,7 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.deepPurple,
         title: Text(
             // widget.name
             widget.name),
